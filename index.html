@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <link rel="stylesheet" href="./main.css">
+        
+        <title>Lofi Chill</title>
+</head>
+<body>
+        <div class="app">
+                <div class="background-img">
+                        <img src="https://free4kwallpapers.com/uploads/originals/2020/03/26/lofi-music-channel-inspired-oc-wallpaper.jpg" alt="">
+                </div>
+
+                <div class="pomodoro">
+                        <ion-icon class="out-pomodoro" name="log-out-outline"></ion-icon>
+                        <ion-icon class="starTimePomodoro" name="play-circle-outline"></ion-icon>
+                        <ion-icon class="pauseTimePomodoro" name="pause-outline"></ion-icon>
+                        
+                        <span class="message-clock"> 0 : 0</span>
+
+                                <ul class="setTime-pomodoro">
+                                        <li>
+                                                <span>Pomodoro</span>
+                                                <input type="number" class="setTimePomodoro" placeholder="25"></li>
+                                        <li>
+                                                 <span>ShortBreak</span>
+                                                 <input type="number" class="setTimeShort" placeholder="5">
+                                        </li>
+                                        <li>
+                                                <span>LongBreak</span>
+                                                <input type="number" class="setTimeLong" placeholder="15">
+                                        </li>
+                                </ul>
+                        <div class="settingPomodoro">
+                                <ion-icon name="settings-outline"></ion-icon>
+                        </div>
+                </div>
+
+                <div class="block-timetable">
+                        
+                                <ul class="wrap-time-table">
+                                        
+                                        
+                                        <li class="option-input">
+                                                <ion-icon class="pencil-icon" name="pencil-outline"></ion-icon>
+                                                <ion-icon class="cloud-icon" name="cloud-done-outline"></ion-icon>
+                                                <ion-icon class="trash-icon" name="trash-outline"></ion-icon>
+                                        </li>
+                                        <li>Thứ 2</li>
+                                        <li>Thứ 3</li>
+                                        <li>Thứ 4</li>
+                                        <li>Thứ 5</li>
+                                        <li>Thứ 6</li>
+                                        <li>Thứ 7</li>
+                                        <li>Chủ Nhật</li>
+                                        
+                                        
+                                        <li class="box-table">
+                                                <input type="time" name="" id="input-table" placeholder="hh : mm">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="time" name="" id="input-table" placeholder="hh : mm">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="time" name="" id="input-table" placeholder="hh : mm">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="time" name="" id="input-table" placeholder="hh : mm">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="time" name="" id="input-table" placeholder="hh : mm">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="time" name="" id="input-table" placeholder="hh : mm">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="time" name="" id="input-table" placeholder="hh : mm">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="time" name="" id="input-table" placeholder="hh : mm">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="time" name="" id="input-table" placeholder="hh : mm">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="time" name="" id="input-table" placeholder="hh : mm">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="time" name="" id="input-table" placeholder="hh : mm">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="time" name="" id="input-table" placeholder="hh : mm">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="time" name="" id="input-table" placeholder="hh : mm">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="time" name="" id="input-table" placeholder="hh : mm">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="time" name="" id="input-table" placeholder="hh : mm">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                        <li class="box-table">
+                                                <input type="text" name="" id="input-table" placeholder="plan">
+                                                <span class="messTable"></span>
+                                        </li>
+                                       
+                                       
+                                </ul>
+                        
+                </div>
+
+                <div class="menu">
+                        <ion-icon class="grid-outline" name="grid-outline"></ion-icon>
+                        <span class="active-pomodoro"></span>
+                        <ul>
+                                <li>
+                                       <a href="#">
+                                        <ion-icon name="home-outline"></ion-icon>
+                                        <span class="title">Home</span>
+                                       </a> 
+                                </li>
+                                <li class="menu-music">
+                                       <a href="#">
+                                        <ion-icon name="musical-notes-outline"></ion-icon>
+                                        <span class="title">Music</span>
+                                       </a> 
+                                </li>
+                                <li class="menu-pomodoro">
+                                       <a href="#">
+                                        <ion-icon name="alarm-outline"></ion-icon>
+                                        <span class="title">Pomodoro</span>
+                                       </a> 
+                                </li>
+                                <li class="menu-timeTable">
+                                        <a href="#">
+                                        <ion-icon name="today-outline"></ion-icon>
+                                         <span class="TimeTable">Time Table</span>
+                                        </a> 
+                                 </li>
+                                <li>
+                                       <a href="#">
+                                        <ion-icon name="color-palette-outline"></ion-icon>
+                                        <span class="title">Theme</span>
+                                       </a> 
+                                </li>
+                                
+                                <li>
+                                       <a href="#">
+                                        <ion-icon name="log-out-outline"></ion-icon>
+                                        <span class="title">Sign Out</span>
+                                       </a> 
+                                </li>
+                        </ul>
+
+                        <div class="toggle"></div>
+
+                </div>
+
+                <div class="controlPlay">
+                        <div class="c-containter">
+                                <div class="music-container">
+                                    <section class="album-cover">                           
+                                        
+                                        
+                                        <img src="//cdn.atrera.com/images/cover_yz2mak.jpg" class="cover" alt="From One To Nine by Marcel Pequel">
+                                          
+                                    </section>
+                                    <section class="music-player">
+                                        <h1 class="music-player__title"></h1>
+                                        <h2 class="music-player__author"></h2>
+                                        <div class="music-time">
+                                            <p class="music-time__current"></p>
+                                            <p class="music-time__last"></p>
+                                        </div>
+                                        <div class="music-bar" id="progress">
+                                            <div id="length"></div>
+                                        </div>
+                                        <div class="music-order">
+                                            <div class="music-order__loop is-loop" id="loop">
+                                                <img src="https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/loop.svg" alt="Loop music">
+                                            </div>
+                                            <div class="music-order__shuffle" id="shuffle">
+                                                <img src="https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/shuffle.svg" alt="Shuffle music">
+                                            </div>
+                                        </div>
+                                        <div class="music-control">
+                                            <div class="music-control__backward" id="backward">
+                                                <img src="https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/backward.svg" alt="Backward">
+                                            </div>
+                                            <div class="music-control__play" id="play">
+                                                <img src="https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/play.svg" alt="Play" class="play">
+                                            </div>
+                                            <div class="music-control__forward" id="forward">
+                                                <img src="https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/forward.svg" alt="Forward">
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+
+</body>
+
+<script src="./js/timeClock.js"></script>
+<script src="./js/lofi.js"></script>
+<script>
+      //  getTimeClock();
+     
+</script>
+<script src="./js/music.js"></script>
+</html>

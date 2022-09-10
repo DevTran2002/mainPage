@@ -1,0 +1,621 @@
+*{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+        user-select: none;
+}
+li
+{
+        list-style: none;
+}
+:root {
+        --colortheme : rgba(127, 162, 187, 0.801);
+        --colorSelect:  rgba(138, 189, 212, 0.5);
+        --bg-1: #FFCDD2;
+        --bg-2: #B2EBF2;
+        --music-bar: #2196F3;
+        --music-bar-bg: #efefef;
+}
+
+body
+{
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(219, 219, 219);
+       overflow: hidden;        /* ẩn thanh scroll bar */
+}
+
+.app
+{
+        position: relative;
+        width: 100%;
+        height: 100%;
+}
+
+img {                   /*disable drag image css  */
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+
+.background-img
+{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+}
+
+.background-img img
+{
+        opacity: 95%;
+        z-index: -1;
+}
+
+.pomodoro
+{       
+        position: absolute;
+        width: 350px;
+        height: 200px;
+        top: 5%;
+        left: calc(50% - 350px/2);
+        border-radius: 10px;
+        background-color: var(--colortheme);
+        overflow: hidden;
+        transition: 1s ,center;
+        transform: scale(0);
+}
+.out-pomodoro
+{
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 3px;
+}
+
+.starTimePomodoro
+{
+        position: absolute;
+        top: 5px;
+        right:  50px;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+        border-radius: 3px;
+
+}
+.pauseTimePomodoro
+{
+        position: absolute;
+        top: 5px;
+        right:  30px;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+        border-radius: 3px;
+}
+
+.out-pomodoro:hover, .starTimePomodoro:hover , .pauseTimePomodoro:hover
+{
+        background-color: var(--colorSelect);
+        transform: scale(110%);
+        transition: 0.5s;
+}
+
+.setTime-pomodoro
+{
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 50px;
+        flex-wrap: nowrap;
+        gap: 15px;
+        bottom: -130px;
+        justify-content: center;
+}
+.setTime-pomodoro span
+{
+        color: white;
+        font-size: 11px;
+        text-align: center;
+}
+.setTime-pomodoro input
+{
+        width: 41px;
+        height: 20px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 4px;
+        outline: none;
+        padding: 0 5px;
+}
+
+.settingPomodoro
+{
+        position: relative;
+        bottom: -120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+}
+
+.settingPomodoro ion-icon
+{
+        color: white;
+        font-size: 20px;
+        animation: rotage 1s linear infinite ;
+}
+@keyframes rotage {
+        to{
+                transform: rotate(360deg);
+        }
+}
+
+
+.message-clock
+{
+        position: absolute;
+        top: 80px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 40px;
+        font-weight: 500;
+        color: white;
+}
+
+.menu 
+{       
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+        width: 65px;
+        height: 550px;
+        border-radius: 15px;
+        background-color: var(--colortheme);
+        overflow: hidden;
+        transition: 1s;
+}
+
+.menu.active
+{
+        width: 250px;
+}
+
+.grid-outline
+{
+        position: relative;
+        top: 10px;
+        left: 50%;
+        transform: translate(-50%,0);
+        font-size: 24px;
+        color: rgb(255, 255, 255);
+}
+
+.menu ul li
+{
+        display: block;
+        position: relative;
+        list-style: none;    
+        margin: 25px 0;
+        width: 100%;
+        height: 50px;
+        transition: 1s;
+}
+
+.menu .menu-pomodoro.activeEventClick-menu
+{
+        background-color: rgb(137, 181, 207);
+        height: 70px;
+       
+}
+
+.menu ul li a
+{
+        position: relative;
+        display: flex;
+        width: 250px;
+        height: 100%;
+        padding: 0 0 0 20px;
+        gap: 20px;
+        text-decoration: none;
+}
+.menu ul li a ion-icon
+{   
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        color: white;
+}
+.menu ul li a span
+{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 15px;
+}
+
+.menu ul li a:hover
+{
+        background-color: var(--colorSelect);
+}
+
+.toggle
+{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 100rem;
+        background-color: white;
+        bottom: 15px;
+        right: 15px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.315);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+}
+.toggle::after
+{
+        position: absolute;
+        content: ' ';
+        width: 26px;
+        height: 3px;
+        background-color: var(--colortheme);
+        border-radius: 3px;
+        transform: translateY(-5px);
+        transition: 1s;
+}
+.toggle::before
+{
+        position: absolute;
+        content: ' ';
+        width: 26px;
+        height: 3px;
+        background-color: var(--colortheme);
+        border-radius: 3px;
+        transform: translateY(5px);
+        transition: 1s;
+}
+
+
+.menu.active .toggle::before
+{
+        transform: translateY(0) rotate(-405deg);
+}
+.menu.active .toggle::after
+{
+        transform: translateY(0) rotate(225deg);
+}
+
+/*                    time table                     */
+.block-timetable
+{
+        position: absolute;
+        width: 800px;
+        height: 500px;
+        background-color: rgb(206, 214, 218);
+        border-radius: 10px;
+        box-shadow: 5px 10px 10px #333;
+        top: calc(50% - 250px);
+        left: 25%;
+        overflow: hidden;
+        transition: 1s;
+        transform: scale(0);
+
+}
+
+.wrap-time-table
+{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(16, 1fr);
+        
+}
+
+
+.wrap-time-table li
+{
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 2px;
+}
+.wrap-time-table li input
+{
+        width: 100%;
+        height: 100%;
+        padding-left: 5px; ;
+        border: none;
+        outline: none;
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.507);
+}
+
+.box-table
+{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.option-input
+{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+}
+
+.option-input ion-icon
+{
+        cursor: pointer;
+
+}
+
+#input-table
+{
+        
+        width: 0;
+        height: 100%;
+        background-color: white;
+        transition: 1s;
+        text-align: center;
+}
+
+.messTable
+{
+        position: absolute;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        text-align: center;
+        font-size: 13px;
+}
+
+
+/*                 music              */      
+
+
+div > img {
+        transition: 300ms;
+      }
+      
+      div {
+        box-sizing: border-box;
+      }
+      
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      
+      p {
+        margin-top: 0;
+        margin-bottom: 0.3em;
+      }
+      
+      div,
+      section {
+        box-sizing: border-box;
+      }
+      
+      .c-containter {
+        display: none;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        padding: 1em;
+        animation: fade 0.5s linear;
+      }
+
+      @keyframes fade {
+        from{
+                transform: scale(0);
+        }
+        to{
+                transform: scale(100%);
+        }
+      }
+      
+      .music-container {
+        position: relative;
+        display: flex;
+        box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
+        max-height: 290px;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      
+      .album-cover {
+        flex: 1 0 30%;
+      }
+      .album-cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      .arrow {
+        position: absolute;
+        top: calc(50% - 2.5em);
+        background: rgba(255, 255, 255, 0.3);
+        border: 0;
+        width: 5em;
+        height: 5em;
+        cursor: pointer;
+      }
+      .arrow:hover {
+        background: rgba(255, 255, 255, 0.5);
+      }
+      .arrow img {
+        display: block;
+        width: 20px;
+        margin: 0 auto;
+      }
+      .arrow.left {
+        left: -5em;
+      }
+      .arrow.right {
+        right: -5em;
+      }
+      
+      .music-player {
+        position: relative;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        background-image: url("https://images.pexels.com/photos/3810824/pexels-photo-3810824.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        background-size: cover;
+        padding: 1em;
+        text-align: center;
+        width: 500px;
+        max-width: 500px;
+        
+      }
+
+ 
+
+      .music-player__title {
+        margin: 0 0 0.1em 0;
+      }
+      .music-player__author {
+        margin: 0 0 0.5em 0;
+      }
+      
+      .music-bar {
+        background: #efefef;
+        stroke-width: 1;
+        height: 8px;
+        width: 100%;
+      }
+      .music-bar:hover {
+        cursor: pointer;
+      }
+      .music-bar #length {
+        width: 0%;
+        background: #2196F3;
+        height: 100%;
+        transition: width linear 200ms;
+      }
+      
+      .music-time {
+        display: flex;
+        flex-flow: row wrap;
+      }
+      .music-time__last {
+        margin-left: auto;
+      }
+      
+      .music-order {
+        display: flex;
+        flex-flow: row wrap;
+      }
+      .music-order__shuffle, .music-order__loop {
+        width: 1.2em;
+        height: 1.2em;
+        opacity: 0.2;
+        margin: 0.3em 0;
+      }
+      .music-order__shuffle.is-loop, .music-order__loop.is-loop {
+        opacity: 1 !important;
+      }
+      .music-order__shuffle.is-loop-one, .music-order__loop.is-loop-one {
+        opacity: 1 !important;
+      }
+      .music-order__shuffle {
+        margin-left: auto;
+      }
+      
+      .music-control {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        height: 2em;
+      }
+      .music-control__play {
+        width: 3em;
+        height: 3em;
+        margin: 0 1em;
+      }
+      .music-control__backward, .music-control__forward {
+        width: 1.5em;
+        height: 1.5em;
+      }
+      
+      .disclaimer {
+        font-size: 0.9em;
+        margin-top: 1em;
+        text-align: center;
+      }
+      .disclaimer a {
+        color: #2196F3;
+      }
+      
+      @media all and (max-width: 960px) {
+        .c-containter {
+          display: none;
+          overflow: auto;
+        }
+      
+        .music-container {
+          flex-flow: column wrap;
+          max-height: inherit;
+          max-width: 270px;
+          margin: 0 auto;
+          overflow: auto;
+        }
+      
+        .music-player {
+          width: 100%;
+          max-width: 100%;
+        }
+        .music-player__title {
+          font-size: 1.5em;
+        }
+        .music-player__author {
+          font-size: 1em;
+        }
+      
+        .album-cover {
+          position: relative;
+          flex: 1 1 100%;
+          max-width: 270px;
+          max-height: 270px;
+        }
+      
+        .arrow {
+          position: absolute;
+          top: calc(50% - 1.5em);
+          width: 3em;
+          height: 3em;
+        }
+        .arrow.left {
+          left: 0;
+        }
+        .arrow.right {
+          right: 0;
+        }
+      
+        .music-control__play {
+          width: 2.2em;
+          height: 2.2em;
+        }
+      }
