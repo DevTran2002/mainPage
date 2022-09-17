@@ -118,3 +118,90 @@ iconMusic.onclick = function(){
 }
 
       
+/// background
+
+
+function setCookie(name , value){
+
+        document.cookie = name + "=" + value; 
+   
+}
+
+function getCookie(name) {
+        // Split cookie string and get all individual name=value pairs in an array
+        var cookieArr = document.cookie.split(";");
+        
+        // Loop through the array elements
+        for(var i = 0; i < cookieArr.length; i++) {
+            var cookiePair = cookieArr[i].split("=");
+            
+            /* Removing whitespace at the beginning of the cookie name
+            and compare it with the given string */
+            if(name == cookiePair[0].trim()) {
+                // Decode the cookie value and return
+                return decodeURIComponent(cookiePair[1]);
+            }
+            else
+            {
+                setCookie("id" , 0);
+            }
+        }
+        
+        // Return null if not found
+        return null;
+    }
+
+
+function background (){
+        const listImg = [
+                {
+                        id : 1,
+                        url:
+                         "https://free4kwallpapers.com/uploads/originals/2020/03/26/lofi-music-channel-inspired-oc-wallpaper.jpg"
+                },
+                {
+                        id : 2,
+                        url:
+                         "https://img6.thuthuatphanmem.vn/uploads/2022/01/25/anh-lofi-chill-dep-nhat_042522998.jpg"
+                },
+                {
+                        id : 3,
+                        url:
+                         "https://img6.thuthuatphanmem.vn/uploads/2022/01/25/anh-lofi-chill-dep_042523254.jpg"
+                },
+                {
+                        id : 4,
+                        url:
+                         "https://img6.thuthuatphanmem.vn/uploads/2022/01/25/hinh-anh-lofi-chill-don-gian-dep_042527188.jpg"
+                },
+                {
+                        id : 5,
+                        url:
+                         "https://img6.thuthuatphanmem.vn/uploads/2022/01/25/hinh-anh-lofi-chill-buon-co-don_042525346.jpg"
+                },
+                {
+                        id : 6,
+                        url:
+                         "https://img6.thuthuatphanmem.vn/uploads/2022/01/25/hinh-anh-lofi-chill-cuc-chat_042525996.jpg"
+                },
+                {
+                        id : 6,
+                        url:
+                         "https://img6.thuthuatphanmem.vn/uploads/2022/01/25/hinh-anh-lofi-chill-mong-mo_042528196.jpg"
+                },
+
+        ];
+
+        let backgroundEle = document.querySelector(".background-img img");
+        let themeIcon = document.querySelector(".menu-theme");
+        let numberID =getCookie("id") ;   
+        backgroundEle.setAttribute("src" , listImg[numberID].url);
+
+        themeIcon.onclick = function(){       
+                temp = getCookie("id")  <=  listImg.length - 2 ? numberID ++ : numberID  = 0;
+                backgroundEle.setAttribute("src" , listImg[temp].url);
+                setCookie("id" , temp) ;          
+        }
+}
+
+        background();
