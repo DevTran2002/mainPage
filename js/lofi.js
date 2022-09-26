@@ -1,13 +1,24 @@
 
  let navigation = document.querySelector('.menu');
-
+let action = navigation.querySelector('.grid-outline');
  let toggle = navigation.querySelector('.toggle');
 
 toggle.onclick = function(){
         navigation.classList.toggle('active')
 }
 
+var flagAction = true;
 
+action.onclick = function(){
+        if(flagAction){
+                navigation.classList.add('action');
+                flagAction = false;
+        }
+        else{
+                flagAction = true;
+                navigation.classList.remove("action");
+        }
+}
 //-------------------------time----table------------------------------------//
 
 let timeTable = document.querySelector('.wrap-time-table');
@@ -26,10 +37,12 @@ document.querySelector('.menu-timeTable').onclick = function(){
                 document.querySelector('.block-timetable').setAttribute("style", " transform: scale(100%)" , "display: block");
                 document.querySelector(".pomodoro").setAttribute("style","transform: scale(0)", "display: none");
                 elementMusic.setAttribute("style", "display: none");
+
+                navigation.classList.remove("action");
                 flagTimeTable = false;
         }
         else{
-                document.querySelector('.block-timetable').setAttribute("style", " transform: scale(0)" , "display: none");
+                document.querySelector('.block-timetable').setAttribute("style", " transform: scale(0%)");
                 flagTimeTable = true;
         }
 }
@@ -78,11 +91,12 @@ penInput.onclick = function(){
         trashIcon.onclick = function(){
                 var result = confirm('Dữ liệu sẽ bị mất bạn có chắc chắn?');
                 if(result){
+                        saveData = localStorage.getItem('theme');
                         localStorage.clear();
+                        localStorage.setItem('theme', saveData);
                         loadingTimetable();
                 }
         }
-
 
 // loading time table
 function loadingTimetable()    {
@@ -109,6 +123,8 @@ iconMusic.onclick = function(){
                 elementMusic.setAttribute("style" ,"display: flex" );
                 document.querySelector('.block-timetable').setAttribute("style", " transform: scale(0)" , "display: none");
                 document.querySelector(".pomodoro").setAttribute("style","transform: scale(0)", "display: none");
+
+                navigation.classList.remove("action");
                 flagMusic = false;
         }
         else{
@@ -120,37 +136,15 @@ iconMusic.onclick = function(){
       
 /// background
 
+        function isDataLocalStorage(){
+                for(var i = 0; i< localStorage.length ; i++){
+                        if(localStorage.key(i)  == 'theme'){
+                                return true;
+                        }
+                }
 
-function setCookie(name , value){
-
-        document.cookie = name + "=" + value; 
-   
-}
-
-function getCookie(name) {
-        // Split cookie string and get all individual name=value pairs in an array
-        var cookieArr = document.cookie.split(";");
-        
-        // Loop through the array elements
-        for(var i = 0; i < cookieArr.length; i++) {
-            var cookiePair = cookieArr[i].split("=");
-            
-            /* Removing whitespace at the beginning of the cookie name
-            and compare it with the given string */
-            if(name == cookiePair[0].trim()) {
-                // Decode the cookie value and return
-                return decodeURIComponent(cookiePair[1]);
-            }
-            else
-            {
-                setCookie("id" , 0);
-            }
+                return false;
         }
-        
-        // Return null if not found
-        return null;
-    }
-
 
 function background (){
         const listImg = [
@@ -172,7 +166,7 @@ function background (){
                 {
                         id : 4,
                         url:
-                         "https://img6.thuthuatphanmem.vn/uploads/2022/01/25/hinh-anh-lofi-chill-don-gian-dep_042527188.jpg"
+                         "https://images.unsplash.com/photo-1483095348487-53dbf97d8d5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                 },
                 {
                         id : 5,
@@ -185,23 +179,35 @@ function background (){
                          "https://img6.thuthuatphanmem.vn/uploads/2022/01/25/hinh-anh-lofi-chill-cuc-chat_042525996.jpg"
                 },
                 {
-                        id : 6,
+                        id : 7,
                         url:
-                         "https://img6.thuthuatphanmem.vn/uploads/2022/01/25/hinh-anh-lofi-chill-mong-mo_042528196.jpg"
+                         "https://images.unsplash.com/photo-1512474331201-782fc6a4ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80"
                 },
 
         ];
 
         let backgroundEle = document.querySelector(".background-img img");
         let themeIcon = document.querySelector(".menu-theme");
-        let numberID =getCookie("id") ;   
-        backgroundEle.setAttribute("src" , listImg[numberID].url);
-
+        
+        
+       if(isDataLocalStorage() == false){
+                localStorage.setItem('theme' ,  1);
+        }
+        var getDataLocal = localStorage.getItem('theme');
+        backgroundEle.setAttribute("src" , listImg[getDataLocal].url);
+        //document.querySelector(".img_timeTable").setAttribute("src" , listImg[getDataLocal].url);
         themeIcon.onclick = function(){       
-                temp = getCookie("id")  <=  listImg.length - 2 ? numberID ++ : numberID  = 0;
-                backgroundEle.setAttribute("src" , listImg[temp].url);
-                setCookie("id" , temp) ;          
+                if(getDataLocal < listImg.length-1)
+                getDataLocal++;
+
+                else
+                getDataLocal = 0;
+                localStorage.setItem('theme' ,  getDataLocal);
+                backgroundEle.setAttribute("src" , listImg[getDataLocal].url);
+                //document.querySelector(".img_timeTable").setAttribute("src" , listImg[getDataLocal].url);
+
         }
 }
 
         background();
+         

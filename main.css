@@ -172,17 +172,19 @@ img {                   /*disable drag image css  */
 
 .menu 
 {       
-        display: inline-block;
+       
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         left: 20px;
         width: 65px;
-        height: 550px;
+        height: 500px;
         border-radius: 15px;
         background-color: var(--colortheme);
         overflow: hidden;
         transition: 1s;
+        transform-origin: top center;            
+        z-index: 10;
 }
 
 .menu.active
@@ -220,7 +222,7 @@ img {                   /*disable drag image css  */
 
 .menu ul li a
 {
-        position: relative;
+        position: absolute;
         display: flex;
         width: 250px;
         height: 100%;
@@ -302,19 +304,21 @@ img {                   /*disable drag image css  */
 .block-timetable
 {
         position: absolute;
-        width: 800px;
+        width: 55em;
         height: 500px;
-        background-color: rgb(206, 214, 218);
         border-radius: 10px;
-        box-shadow: 5px 10px 10px #333;
+        box-shadow: 5px 10px 10px rgba(146, 146, 146, 0.555);
         top: calc(50% - 250px);
-        left: 25%;
+        left: calc(50% - 25em);
         overflow: hidden;
         transition: 1s;
         transform: scale(0);
 
 }
-
+.img_timeTable{
+        position: absolute;
+        z-index: -1;
+}
 .wrap-time-table
 {
         width: 100%;
@@ -331,8 +335,8 @@ img {                   /*disable drag image css  */
         width: 100%;
         height: 100%;
         background-color: transparent;
-        border: 1px solid rgb(0, 0, 0);
-        border-radius: 2px;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        border-radius: 1px;
 }
 .wrap-time-table li input
 {
@@ -363,7 +367,10 @@ img {                   /*disable drag image css  */
 .option-input ion-icon
 {
         cursor: pointer;
+}
 
+.option-input ion-icon:hover{
+        color: white;
 }
 
 #input-table
@@ -371,9 +378,10 @@ img {                   /*disable drag image css  */
         
         width: 0;
         height: 100%;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.5);
         transition: 1s;
         text-align: center;
+        padding: 0;
 }
 
 .messTable
@@ -384,7 +392,8 @@ img {                   /*disable drag image css  */
         transform: translateX(-50%);
         z-index: -1;
         text-align: center;
-        font-size: 13px;
+        font-size: 14px;
+        overflow-wrap: break-word;
 }
 
 
@@ -568,6 +577,9 @@ div > img {
       .disclaimer a {
         color: #2196F3;
       }
+
+     
+
       
       @media all and (max-width: 960px) {
         .c-containter {
@@ -618,4 +630,35 @@ div > img {
           width: 2.2em;
           height: 2.2em;
         }
+
+        .menu{
+                height: 50px;
+                transform: translateY(0px);
+                top: 20px;
+        }
+
+        .menu .toggle{
+                display: none;
+        }
+        .grid-outline{
+                cursor: pointer;
+        }
+
+        .menu.action{             
+                height: 500px;
+        }
+
+        .pomodoro{
+                top: 100px;
+        }
+        .block-timetable{
+                top: 10vh;
+                width: 98%;
+                height: 80vh;
+                left: 1%;
+        }
+        .messTable{
+                line-height: 10px;
+                }
       }
+

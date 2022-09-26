@@ -96,6 +96,7 @@ eventPomodoro.onclick = function () {
                 pomodoro.setAttribute("style", " transform: scale(100%)" , "display: block");
                 document.querySelector('.block-timetable').setAttribute("style", " transform: scale(0)" , "display: none");
                 document.querySelector('.c-containter').setAttribute("style", "display: none");
+                document.querySelector('.menu').classList.remove("action");
 
                 eventPomodoro.classList.add("activeEventClick-menu");
                 activeHidden = false;
