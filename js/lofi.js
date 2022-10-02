@@ -161,7 +161,7 @@ function background (){
                 {
                         id : 3,
                         url:
-                         "https://img6.thuthuatphanmem.vn/uploads/2022/01/25/anh-lofi-chill-dep_042523254.jpg"
+                         "https://wallpaperaccess.com/download/relaxing-276139"
                 },
                 {
                         id : 4,
@@ -181,7 +181,7 @@ function background (){
                 {
                         id : 7,
                         url:
-                         "https://images.unsplash.com/photo-1512474331201-782fc6a4ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80"
+                         "https://wallpaperaccess.com/full/276162.jpg"
                 },
 
         ];

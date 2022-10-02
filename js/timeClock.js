@@ -18,8 +18,8 @@ var breakTime  = 1;
 var activeStart = true;
 var s,m;
 const audio = new Audio();
-        audio.src = "../audio/Đồng Hồ Báo Thức.mp3";
-
+        audio.src = "https://docs.google.com/uc?id=1U002Nc1diUPDQuEUpI9dj5EI1bI35_yv";
+        audio.loop;
 //out pomodoro
 pomodoro.querySelector('.out-pomodoro').onclick = function(){
         if(confirm('Bạn chắc chắn đóng Pomodoro không?')){
@@ -78,7 +78,7 @@ function setBreakShort(m){
 function setBreakLong(m){
         if(inputTimeLong.value == '')
         {
-              m =15;
+              m =25;
         }
         else{
                 m = inputTimeLong.value;
@@ -101,7 +101,6 @@ eventPomodoro.onclick = function () {
                 eventPomodoro.classList.add("activeEventClick-menu");
                 activeHidden = false;
 
-
                 document.querySelector('.c-containter').setAttribute("style", "display: none");
         } 
         else{
@@ -116,27 +115,32 @@ function countDow(s, m, statusTime) {
   var messageClock = document.querySelector(".message-clock");
 
         if (statusTime) {               // trạng thái hidden
-                if (s === -1) {
-                        m -= 1;
+                if (s == -1) {
+                        m --;
                         s = 59;
                 }       
-                else if (m === -1 & breakTime % 2 == 1& breakTime < 7 ) {
-                        audio.play();
-                        breakTime ++;
-                        m = setBreakShort(m);
-                        s = 0;
-                }
-                else if(m === -1 & breakTime % 2 == 0 ){
-                        audio.play();
-                        breakTime ++;
+                else if (m == 0 & s == 0  & breakTime % 2 == 1) {
                         m = setTime(m);
                         s = 0;
+                        breakTime ++;
                 }
-                else if(m === -1 & breakTime == 7){
+                else if(m == 0 & s == 0  & breakTime % 2 == 0 & breakTime != 8){
                         audio.play();
-                        breakTime = 0;
+                        if(confirm("Bạn có mốn tắt nhạc không")){
+                                audio.pause();
+                        }
+                        m = setBreakShort(m);
+                        s = 0;
+                        breakTime ++;
+                }
+                else if(m == 0 & s == 0 & breakTime == 8){
+                        audio.play();
+                        if(confirm("Bạn có mốn tắt nhạc không")){
+                                audio.pause();
+                        }
                         m = setBreakLong(m);
                         s = 0;
+                        breakTime = 1;
                 }
         }
         // điều kiện trạng thái out 
