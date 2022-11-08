@@ -136,7 +136,6 @@ function countDow(s, m, statusTime) {
                         s = 59;
                 }  
         if (statusTime) {               // trạng thái hidden   (show active)   
-                console.log(breakTime);
                 audio.loop;
                 audioRing.loop;
                 if(s == 0 & m == 0 & breakTime %2 ==0 ){
@@ -145,7 +144,6 @@ function countDow(s, m, statusTime) {
                         }
                         m = setTime(m);
                         s=0;
-                        console.log("time out");
                         breakTime++;
 
                 }
@@ -155,14 +153,12 @@ function countDow(s, m, statusTime) {
                         s = 0;
                         breakTime++;
 
-                        console.log("time break shot");
                 }
                 else if(s == 0 & m == 0 & breakTime == 7){
                         audio.play();
                         m = setBreakLong(m);
                         s = 0;
                         breakTime = 0;
-                        console.log("time break long");
                 }
         }
         
