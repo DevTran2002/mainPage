@@ -101,10 +101,17 @@ img {                   /*disable drag image css  */
         cursor: pointer;
         border-radius: 3px;
 }
-
-.out-pomodoro:hover, .starTimePomodoro:hover , .pauseTimePomodoro:hover
+.pomodoro-mute{
+        position: absolute;
+        top: 5px;
+        right:  75px;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+        border-radius: 3px;
+}
+.out-pomodoro:hover, .starTimePomodoro:hover , .pauseTimePomodoro , .pomodoro-mute:hover
 {
-        background-color: var(--colorSelect);
         transform: scale(110%);
         transition: 0.5s;
 }
@@ -213,12 +220,6 @@ img {                   /*disable drag image css  */
         transition: 1s;
 }
 
-.menu .menu-pomodoro.activeEventClick-menu
-{
-        background-color: rgb(137, 181, 207);
-        height: 70px;
-       
-}
 
 .menu ul li a
 {
